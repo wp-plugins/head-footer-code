@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easy add site-wide and/or article specific custom code to head and/or footer sections (before the </body>) by hooking to wp_head and wp_footer.
+Easy add site-wide and/or article specific custom code to head and/or footer sections (before the &lt;/body&gt;) by hooking to wp_head and wp_footer.
 
 == Description ==
 
