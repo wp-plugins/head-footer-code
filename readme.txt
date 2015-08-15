@@ -68,11 +68,11 @@ Because all other similar plugins could not satisfy my requirements. In general,
 
 == Screenshots ==
 
-0. Head &amp; Footer Code box in Plugin search results
-1. Site-wide settings page
-2. Article specific metabox
-3. Example of custom code inserted to HEAD section (site-wide with appended article specific)
-4. Example of custom code inserted to FOOTER section (site-wide with appended article specific)
+1. Head &amp; Footer Code box in Plugin search results
+2. Site-wide settings page
+3. Article specific metabox
+4. Example of custom code inserted to HEAD section (site-wide with appended article specific)
+5. Example of custom code inserted to FOOTER section (site-wide with appended article specific)
 
 == Upgrade Notice ==
 
