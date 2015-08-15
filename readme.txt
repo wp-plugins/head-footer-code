@@ -1,16 +1,30 @@
 === Head & Footer Code ===
 Contributors: urkekg
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GZ2Y3M7ZL422L
-Tags: wp_head, wp_footer, head, header, headers, footer, footers, code, script, scripts, snippet, snippets, head footer code, custom head script, custom footer script, head code, footer code, javascript, css, link, meta, meta-tags, google analytics, pixel tracking, tracking code, site verification, site-wide, article specific
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8RDRQXPV6YB98
+Tags: wp_head, wp_footer, head footer code, custom head script, custom footer script, google analytics, pixel tracking, tracking code, javascript, scripts, site verification, css
 Requires at least: 3.9
 Tested up to: 4.3
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easy add site-wide and/or article specific custom code to head and/or footer sections (before the &lt;/body&gt;) by hooking to wp_head and wp_footer.
+Easy add site-wide and/or article specific custom code to head and/or footer section (before the &lt;/body&gt;) by hooking to wp_head and wp_footer.
 
 == Description ==
+
+Let we say that you have been told to add some custom code (HTML, JavaScript or CSS style) to page's `<head>` (like site verification code, custom styles, webfont link, etc), or just before `</body>` (like pixel tracking, analytics code, heatmap code, etc), but you are not programmer. Then you can use Head &amp; Footer Code to do that.
+
+Simply go to Tools &rarr; Head &amp; Footer Code in your website admin dashboard, and insert custom code to HEAD or FOOTER section (depending what you have to do).
+
+If you have to insert some custom code specific for individual article (post, page, custom post type), then you can use Article specific metabox while you editing post/page/custom post type (check out [Screenshots](https://wordpress.org/plugins/head-footer-code/screenshots/)). There you can also set should that specific code be appended to site-wide code defined on **Tools** &rarr; **Head &amp; Footer Code**, or should be overwritten.
+
+**Works or broken?**
+
+Please, consider to vote for this plugin. When you vote for broken, be so kind and tell in the [Forum](https://wordpress.org/support/plugin/head-footer-code) what is broken. Maybe I might be able to fix it to make the plugin also work for you.
+
+**I need your support**
+
+It is very hard to continue development and support for this and my other free plugisn without contributions from users like you. If you enjoy using Head &amp; Footer Code and find it useful, please consider [making a donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8RDRQXPV6YB98). Your donation will help encourage and support the plugin's continued development and better user support.
 
 **Features**
 
@@ -22,12 +36,29 @@ Easy add site-wide and/or article specific custom code to head and/or footer sec
 * Choose which post types will have enabled article specific head/footer fields
 * Choose should article specific head/footer code be appended to site-wide code, or will replace site-wide code
 * Site-wide section located under **Tools** > **Head & Footer Code**
+* If you have enabled WP_DEBUG constant in `wp-config.php`, you'll see site-wide and article specific entries in page source code wrapped to commens.
 
 == Installation ==
 
-1. Upload `head-footer-code` directory to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Configure plugin (go to Tools/Head & Footer Code)
+Installation of this plugin is fairly easy as any other WordPress plugin.
+
+**Standard procedure**
+
+1. Go to **Plugins** &rarr; **Add New**.
+1. Search for **head footer code**.
+1. Enter to **Search Plugin** field `had footer code` and press Enter key.
+1. Locate plugin **Head &amp; Footer Code** and click **Install Now** button.
+1. After successfully installed plugin click link **Activate Plugin**.
+1. Visit the **Tools** &rarr; **Head &amp; Footer Code**.
+1. Add the desired code to proper section.
+
+**FTP procedure**
+
+1. Unpack `head-footer-code.zip`
+1. Upload the whole directory and everything underneath to the `/wp-content/plugins/` directory.
+1. Activate the plugin through the 'Plugins' menu in WordPress.
+1. Visit the **Tools** &rarr; **Head &amp; Footer Code** (**Settings** link).
+1. Add the desired code to proper section.
 
 == Frequently Asked Questions ==
 
@@ -37,8 +68,11 @@ Because all other similar plugins could not satisfy my requirements. In general,
 
 == Screenshots ==
 
+0. Head &amp; Footer Code box in Plugin search results
 1. Site-wide settings page
 2. Article specific metabox
+3. Example of custom code inserted to HEAD section (site-wide with appended article specific)
+4. Example of custom code inserted to FOOTER section (site-wide with appended article specific)
 
 == Upgrade Notice ==
 
