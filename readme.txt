@@ -1,14 +1,14 @@
 === Head & Footer Code ===
 Contributors: urkekg
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8RDRQXPV6YB98
+Donate link: http://urosevic.net/wordpress/donate/?donate_for=head-footer-code
 Tags: wp_head, wp_footer, head footer code, custom head script, custom footer script, google analytics, pixel tracking, tracking code, javascript, scripts, site verification, css
 Requires at least: 3.9
 Tested up to: 4.3
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easy add site-wide and/or article specific custom code to head and/or footer section (before the &lt;/body&gt;) by hooking to wp_head and wp_footer.
+Easy add site-wide and/or article specific custom code before the &lt;/head&gt; or &lt;/body&gt; by hooking to wp_head and wp_footer.
 
 == Description ==
 
@@ -80,6 +80,14 @@ Because all other similar plugins could not satisfy my requirements. In general,
 Initial release of new plugin developed by Aleksandar Urosevic.
 
 == Changelog ==
+
+= 1.0.2 =
+* Change: Replace PayPal donation links to prevent account limitations if plugin is used on website that violates PayPal's Acceptable Use Policy
+
+= 1.0.1 =
+* Fix: PHP Notice Trying to get property of non-object
+* Optimize: Remove `attachment` post type from available to select as no reason to have custom head/footer code on attachments
+* Optimize: Settings code cleanup
 
 = 1.0.0 =
 * Initial release.

@@ -7,8 +7,8 @@
  * @wordpress-plugin
  * Plugin Name: Head & Footer Code
  * Plugin URI:  http://urosevic.net/wordpress/plugins/head-footer-code/
- * Description: Easy add site-wide and/or article specific custom code to head and/or footer sections (before the &lt;/body&gt;) by hooking to <code>wp_head</code> and <code>wp_footer</code>.
- * Version:     1.0.0
+ * Description: Easy add site-wide and/or article specific custom code to head and/or footer sections (before the &lt;/head&gt; or &lt;/body&gt;) by hooking to <code>wp_head</code> and <code>wp_footer</code>.
+ * Version:     1.0.2
  * Author:      Aleksandar Urosevic
  * Author URI:  http://urosevic.net
  * License:     GPL-2.0+

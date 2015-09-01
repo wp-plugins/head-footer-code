@@ -112,7 +112,6 @@ function auhfc_settings_init(  ) {
 		)
 	);
 
-
 	/**
 	 * Settings Sections are the groups of settings you see on WordPress settings pages
 	 * with a shared heading. In your plugin you can add new sections to existing
@@ -127,6 +126,10 @@ function auhfc_settings_init(  ) {
 		'head_footer_code'
 	);
 
+	// Prepare clean list of post types w/o attachment
+	$clean_post_types = get_post_types( array( 'public' => true ) );
+	unset( $clean_post_types['attachment'] );
+
 	add_settings_field(
 		'auhfc_post_types',
 		__( 'Post types', 'head-footer-code' ),
@@ -135,7 +138,7 @@ function auhfc_settings_init(  ) {
 		'head_footer_code_article_settings',
 		array(
 			'field'       => 'auhfc_settings[post_types]',
-			'items'       => get_post_types( array( 'public' => true ) ),
+			'items'       => $clean_post_types,
 			'value'       => $auhfc_settings['post_types'],
 			'description' => esc_html__( 'Select which post types will have Article specific section. Default is post and page. Please note, even if you have Head/Footer Code set per article and then you disable that post type, article specific code will not be printed but only site-wide code.', 'head-footer-code' ),
 			'class'       => 'checkbox',
@@ -152,7 +155,14 @@ function auhfc_textarea_field_render( $args ) {
 	if ( empty( $rows ) ) {
 		$rows = 7;
 	}
-	printf( '<textarea name="%s" id="%s" rows="%s" class="%s">%s</textarea><p class="description">%s</p>', $field, $field, $rows, $class, $value, $description );
+	printf(
+		'<textarea name="%1$s" id="%1$s" rows="%2$s" class="%3$s">%4$s</textarea><p class="description">%5$s</p>',
+		$field,
+		$rows,
+		$class,
+		$value,
+		$description
+	);
 } // END function auhfc_textarea_field_render( $args )
 
 
@@ -162,9 +172,8 @@ function auhfc_textarea_field_render( $args ) {
 function auhfc_number_field_render( $args ) {
 	extract( $args );
 	printf(
-		'<input type="number" name="%1$s" id="%2$s" value="%3$s" class="%4$s" min="%5$s" max="%6$s" step="%7$s" /><p class="description">%8$s</p>',
-		$field, // name
-		$field, // id
+		'<input type="number" name="%1$s" id="%1$s" value="%2$s" class="%3$s" min="%4$s" max="%5$s" step="%6$s" /><p class="description">%7$s</p>',
+		$field, // name/id
 		$value, // value
 		$class, // class
 		$min, // min
@@ -192,12 +201,8 @@ function auhfc_checkbox_group_field_render( $args ) {
 		}
 
 		$out .= sprintf(
-			'<label for="%s_%s"><input type="checkbox" name="%s[]" id="%s_%s" value="%s" class="%s" %s />%s</label><br>',
+			'<label for="%1$s_%2$s"><input type="checkbox" name="%1$s[]" id="%1$s_%2$s" value="%2$s" class="%3$s" %4$s />%5$s</label><br>',
 			$field,
-			$key,
-			$field,
-			$field,
-			$key,
 			$key,
 			$class,
 			$checked,
@@ -206,7 +211,7 @@ function auhfc_checkbox_group_field_render( $args ) {
 	}
 
 	$out .= '</fieldset>';
-	$out .= sprintf( '<p class="description">%s</p>' , $description );
+	$out .= sprintf( '<p class="description">%s</p>', $description );
 
 	echo $out;
 
@@ -275,7 +280,7 @@ function auhfc_add_plugin_meta_links( $links, $file ) {
 					__( 'Support' )
 				),
 				sprintf(
-					'<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q6Q762MQ97XJ6" target="_blank">%s</a>',
+					'<a href="http://urosevic.net/wordpress/donate/?donate_for=head-footer-code" target="_blank">%s</a>',
 					__( 'Donate' )
 				),
 			)

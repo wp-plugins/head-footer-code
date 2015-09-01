@@ -29,6 +29,11 @@ function auhfc_get_meta( $field_name = '' ) {
 
 	global $post, $auhfc_post_meta;
 
+	// If $post has not an object, return false
+	if ( empty( $post ) || ! is_object( $post ) ) {
+		return false;
+	}
+
 	$field = get_post_meta( $post->ID, '_auhfc', true );
 
 	if ( ! empty( $field ) && is_array( $field ) && ! empty( $field[ $field_name ] ) ) {
