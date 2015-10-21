@@ -252,7 +252,6 @@ function auhfc_options_page(  ) {
 
 }
 
-
 /**
  * Generate Settings link on Plugins page listing
  * @param  array $links Array of existing plugin row links.

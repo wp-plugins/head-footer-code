@@ -18,6 +18,9 @@ function auhfc_add_meta_boxes() {
 
 	$auhfc_defaults = auhfc_defaults();
 
+	if ( empty( $auhfc_defaults['post_types'] ) ) {
+		return;
+	}
 	foreach ( $auhfc_defaults['post_types'] as $post_type ) {
 		add_meta_box(
 			'auhfc-head-footer-code',

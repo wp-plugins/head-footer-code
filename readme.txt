@@ -3,8 +3,8 @@ Contributors: urkekg
 Donate link: http://urosevic.net/wordpress/donate/?donate_for=head-footer-code
 Tags: wp_head, wp_footer, head footer code, custom head script, custom footer script, google analytics, pixel tracking, tracking code, javascript, scripts, site verification, css
 Requires at least: 3.9
-Tested up to: 4.3
-Stable tag: 1.0.2
+Tested up to: 4.3.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,7 +36,7 @@ It is very hard to continue development and support for this and my other free p
 * Choose which post types will have enabled article specific head/footer fields
 * Choose should article specific head/footer code be appended to site-wide code, or will replace site-wide code
 * Site-wide section located under **Tools** > **Head & Footer Code**
-* If you have enabled WP_DEBUG constant in `wp-config.php`, you'll see site-wide and article specific entries in page source code wrapped to commens.
+* If you have enabled WP_DEBUG constant in `wp-config.php`, you'll see site-wide and article specific entries in page source code wrapped to comments.
 
 == Installation ==
 
@@ -80,6 +80,12 @@ Because all other similar plugins could not satisfy my requirements. In general,
 Initial release of new plugin developed by Aleksandar Urosevic.
 
 == Changelog ==
+
+= 1.0.4 =
+* Fix: PHP Warning:  in_array() expects parameter 2 to be array, string given (introduced in v1.0.3)
+
+= 1.0.3 =
+* Change: Make even default WP post types `post` and `page` optional for page specific head/footer code
 
 = 1.0.2 =
 * Change: Replace PayPal donation links to prevent account limitations if plugin is used on website that violates PayPal's Acceptable Use Policy

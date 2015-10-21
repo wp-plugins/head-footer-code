@@ -9,7 +9,7 @@ function auhfc_defaults() {
 		'head'       => '',
 		'footer'     => '',
 		'priority'   => 10,
-		'post_types' => array( 'post', 'page' ),
+		'post_types' => array(), // array( 'post', 'page' ),
 	);
 	$auhfc_settings = get_option( 'auhfc_settings', $defaults );
 	$auhfc_settings = wp_parse_args( $auhfc_settings, $defaults );
