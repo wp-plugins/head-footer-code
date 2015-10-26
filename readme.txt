@@ -3,8 +3,8 @@ Contributors: urkekg
 Donate link: http://urosevic.net/wordpress/donate/?donate_for=head-footer-code
 Tags: wp_head, wp_footer, head footer code, custom head script, custom footer script, google analytics, pixel tracking, tracking code, javascript, scripts, site verification, css
 Requires at least: 3.9
-Tested up to: 4.3.2
-Stable tag: 1.0.4
+Tested up to: 4.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ It is very hard to continue development and support for this and my other free p
 * Choose should article specific head/footer code be appended to site-wide code, or will replace site-wide code
 * Site-wide section located under **Tools** > **Head & Footer Code**
 * If you have enabled WP_DEBUG constant in `wp-config.php`, you'll see site-wide and article specific entries in page source code wrapped to comments.
+
+General settings, including HEAD, FOOTER global code and priority, have been saved to WordPress option `auhfc_settings`.
+Each post/page/custom post type specific HEAD and FOOTER code have been saved to post meta `_auhfc`.
+On plugin uninstall these data is also deleted from database.
 
 == Installation ==
 
@@ -80,6 +84,11 @@ Because all other similar plugins could not satisfy my requirements. In general,
 Initial release of new plugin developed by Aleksandar Urosevic.
 
 == Changelog ==
+
+= 1.0.5 =
+* Enhance: Add uninstall routine to make some housekeeping on plugin removal.
+* Enhance: Add post type in debug comments.
+* Readme: Test on WordPress v4.4-beta1 and updated compatibility.
 
 = 1.0.4 =
 * Fix: PHP Warning:  in_array() expects parameter 2 to be array, string given (introduced in v1.0.3)
